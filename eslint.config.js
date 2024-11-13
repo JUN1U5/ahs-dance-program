@@ -29,7 +29,7 @@ export default [
     },
   },
   {
-    files: ['**/*.{js,jsx,mjs}'],
+    files: ['**/*.{js,jsx,mjs,astro}'],
     languageOptions: {
       parser: babelParser,
       parserOptions: {

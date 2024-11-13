@@ -154,9 +154,7 @@
 			2048,
 			3840
 		],
-		"domains": [
-			"cdn.pixabay.com"
-		],
+		"domains": [],
 		"remotePatterns": []
 	}
 }
