@@ -29,9 +29,16 @@ export default [
     },
   },
   {
-    files: ['**/*.{js,jsx,astro}'],
+    files: ['**/*.{js,jsx,mjs}'],
     languageOptions: {
-      parser: babelParser
+      parser: babelParser,
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          babelrc: false,
+          configFile: false,
+        },
+      },
   },
     rules: {
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
@@ -61,16 +68,3 @@ export default [
     ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro'],
   },
 ];
-
-module.exports = {
-  parser: "@babel/eslint-parser",
-  parserOptions: {
-    requireConfigFile: false,
-    babelOptions: {
-      babelrc: false,
-      configFile: false,
-      // your babel options
-      presets: ["@babel/preset-env"],
-    },
-  },
-};
