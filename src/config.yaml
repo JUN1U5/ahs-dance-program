@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Apex High School Dance Program
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets//imagesdefault.png'
         width: 1200
         height: 628
     type: website
