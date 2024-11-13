@@ -37,34 +37,6 @@
 			"status": 308
 		},
 		{
-			"src": "/homes/mobile-app/",
-			"headers": {
-				"Location": "/homes/mobile-app"
-			},
-			"status": 308
-		},
-		{
-			"src": "/homes/personal/",
-			"headers": {
-				"Location": "/homes/personal"
-			},
-			"status": 308
-		},
-		{
-			"src": "/homes/saas/",
-			"headers": {
-				"Location": "/homes/saas"
-			},
-			"status": 308
-		},
-		{
-			"src": "/homes/startup/",
-			"headers": {
-				"Location": "/homes/startup"
-			},
-			"status": 308
-		},
-		{
 			"src": "/landing/click-through/",
 			"headers": {
 				"Location": "/landing/click-through"

@@ -1,8 +1,10 @@
+import astroEslintParser from 'astro-eslint-parser';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import typescriptParser from '@typescript-eslint/parser';
+import babelParser from "@babel/eslint-parser";
 
 export default [
   js.configs.recommended,
@@ -19,7 +21,7 @@ export default [
   {
     files: ['**/*.astro'],
     languageOptions: {
-      parser: '@babel/eslint-parser',
+      parser: astroEslintParser,
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
@@ -28,6 +30,9 @@ export default [
   },
   {
     files: ['**/*.{js,jsx,astro}'],
+    languageOptions: {
+      parser: babelParser
+  },
     rules: {
       'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
     },
@@ -56,3 +61,16 @@ export default [
     ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro'],
   },
 ];
+
+module.exports = {
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      // your babel options
+      presets: ["@babel/preset-env"],
+    },
+  },
+};

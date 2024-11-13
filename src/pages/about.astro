@@ -1,16 +1,7 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
-import ItemGrid from '~/components/ui/ItemGrid.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
-import { getPermalink } from '~/utils/permalinks';
-import { getCollection, getEntry } from 'astro:content';
-import { getBlogPermalink } from '~/utils/permalinks';
-import { visitEachChild } from 'typescript';
 import Button from '~/components/ui/Button.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
   title: 'About us',
